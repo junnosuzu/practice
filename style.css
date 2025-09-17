@@ -1,0 +1,168 @@
+
+/* style.css */
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.team {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.ruling {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.opposition {
+  background-color: #fbe9e7;
+  color: #d84315;
+}
+
+.score {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.timeline {
+  border-top: 2px solid #ccc;
+  padding-top: 15px;
+}
+
+.event {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.event.ruling {
+  background: #e0f2f1;
+}
+
+.event.opposition {
+  background: #ffebee;
+}
+
+
+
+/* 質問者ボード */
+.questioner-board {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.questioner {
+  background: #fff3cd;
+  border: 2px solid #ffeeba;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #856404;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.questioner .label {
+  margin-right: 10px;
+  color: #6c757d;
+}
+
+
+
+/* 最新情報 */
+.latest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.person {
+  text-align: center;
+  width: 20%;
+}
+
+.person img {
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.person .pname {
+  font-weight: bold;
+}
+
+.speech {
+  flex: 1;
+  margin: 0 20px;
+  padding: 15px;
+  border-radius: 12px;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.speech.opposition {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+.speech.ruling {
+  background: #e0f2f1;
+  color: #004d40;
+}
+
+/* 吹き出しっぽく */
+.speech.opposition::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #ffebee transparent transparent;
+}
+
+.speech.ruling::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #e0f2f1;
+}
+
+/* 要約文 */
+.summary {
+  background: #fff8e1;
+  border-left: 4px solid #ffca28;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+
+.person img {
+  width: 80px;   /* 横幅を80pxに固定 */
+  height: 80px;  /* 高さも80pxに固定 */
+  object-fit: cover; /* はみ出さないようにトリミング */
+  border-radius: 50%; /* 丸くする */
+}
